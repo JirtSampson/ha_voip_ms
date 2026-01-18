@@ -1,0 +1,42 @@
+name: "VoIP.ms Voicemail"
+description: "Monitor VoIP.ms voicemail and expose via MQTT Discovery"
+version: "1.0.0"
+slug: "voipms_voicemail"
+url: "https://github.com/yourusername/ha_voip_ms"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
+homeassistant_api: false
+hassio_api: false
+host_network: false
+ports:
+  8099/tcp: 8099
+ports_description:
+  8099/tcp: "Audio streaming server"
+map:
+  - config:rw
+options:
+  voipms_username: ""
+  voipms_api_password: ""
+  mailboxes: []
+  poll_interval: 60
+  mqtt_host: "core-mosquitto"
+  mqtt_port: 1883
+  mqtt_username: ""
+  mqtt_password: ""
+  audio_port: 8099
+schema:
+  voipms_username: str
+  voipms_api_password: password
+  mailboxes:
+    - str?
+  poll_interval: int(30,3600)
+  mqtt_host: str
+  mqtt_port: port
+  mqtt_username: str?
+  mqtt_password: password?
+  audio_port: port

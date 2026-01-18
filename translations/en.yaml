@@ -1,0 +1,28 @@
+configuration:
+  voipms_username:
+    name: VoIP.ms Username
+    description: Your VoIP.ms account email address
+  voipms_api_password:
+    name: API Password
+    description: API password from VoIP.ms portal (Main Menu > SOAP and REST/JSON API)
+  mailboxes:
+    name: Mailboxes
+    description: List of mailbox IDs to monitor. Leave empty to auto-discover all mailboxes.
+  poll_interval:
+    name: Poll Interval
+    description: Seconds between API polls (minimum 30, maximum 3600)
+  mqtt_host:
+    name: MQTT Host
+    description: MQTT broker hostname (use 'core-mosquitto' for Mosquitto addon)
+  mqtt_port:
+    name: MQTT Port
+    description: MQTT broker port
+  mqtt_username:
+    name: MQTT Username
+    description: MQTT username (leave empty if not required)
+  mqtt_password:
+    name: MQTT Password
+    description: MQTT password (leave empty if not required)
+  audio_port:
+    name: Audio Server Port
+    description: Port for the audio streaming server
