@@ -12,7 +12,7 @@ COPY audio_server.py /
 COPY requirements.txt /
 
 # Install Python packages
-RUN pip3 install --no-cache-dir -r /requirements.txt
+RUN pip3 install --no-cache-dir --break-system-packages -r /requirements.txt
 
 # Run the application
 CMD ["python3", "/run.py"]
